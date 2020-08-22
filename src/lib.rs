@@ -1,21 +1,7 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
 
-mod front_of_house {
-	pub(crate) mod hosting {
-		pub(crate) fn add_to_waitlist() {}
-		
-		fn seat_at_table() {}
-	}
-	
-	mod serving {
-		fn take_order() {}
-		
-		fn serve_order() {}
-		
-		fn take_payment() {}
-	}
-}
+mod front_of_house;
 
 // Bringing the function’s parent module into scope
 // with use so we have to specify the parent module
