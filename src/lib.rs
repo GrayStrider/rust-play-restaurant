@@ -1,7 +1,9 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
+#![allow(unused_imports)]
 
 mod front_of_house;
+mod back_of_house;
 
 // Bringing the function’s parent module into scope
 // with use so we have to specify the parent module
@@ -39,31 +41,4 @@ pub fn eat_at_restaurant() {
 
 fn serve_order() {}
 
-mod back_of_house {
-	fn fix_incorrect_order() {
-		cook_order();
-		super::serve_order();
-	}
-	
-	fn cook_order() {}
-	
-	pub struct Breakfast {
-		pub toast: String,
-		seasonal_fruit: String,
-	}
-	
-	pub enum Appetizer {
-		Soup,
-		Salad,
-	}
-	
-	impl Breakfast {
-		pub fn summer(toast: &str) -> Breakfast {
-			Breakfast {
-				toast: String::from(toast),
-				seasonal_fruit: String::from("peaches"),
-			}
-		}
-	}
-}
 
